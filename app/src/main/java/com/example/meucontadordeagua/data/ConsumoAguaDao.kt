@@ -6,12 +6,12 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 
-@Dao // Diz ao Room que esta é a interface "porteiro"
+@Dao
 interface ConsumoAguaDao {
 
     // Comando para inserir um novo consumo
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun inserir(consumo: ConsumoAgua) // 'suspend' é para Coroutines
+    suspend fun inserir(consumo: ConsumoAgua)
 
     // Comando para buscar o total de ML consumido HOJE
     // Estamos usando Flow, que é a forma moderna (similar ao LiveData)

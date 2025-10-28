@@ -1,4 +1,4 @@
-package com.example.meucontadordeagua.di // (Dentro do pacote 'di')
+package com.example.meucontadordeagua.di
 
 import android.content.Context
 import androidx.room.Room
@@ -11,8 +11,8 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@Module // Indica ao Hilt que este é um módulo
-@InstallIn(SingletonComponent::class) // As dependências aqui viverão o tempo que o app viver
+@Module
+@InstallIn(SingletonComponent::class)
 object AppModule {
 
     // 1. Ensina o Hilt a criar o Banco de Dados (AguaDatabase)
@@ -24,7 +24,7 @@ object AppModule {
             AguaDatabase::class.java,
             "agua_database" // Nome do arquivo do banco de dados
         )
-            .fallbackToDestructiveMigration() // (Usado em desenvolvimento)
+            .fallbackToDestructiveMigration()
             .build()
     }
 

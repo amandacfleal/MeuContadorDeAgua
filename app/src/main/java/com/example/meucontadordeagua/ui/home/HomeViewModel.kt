@@ -1,4 +1,4 @@
-package com.example.meucontadordeagua.ui.home // (Dentro do pacote 'ui.home')
+package com.example.meucontadordeagua.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
